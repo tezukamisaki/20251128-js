@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+button {
+  display: block;
+  margin: 4rem;
+}
+
+/* ふわふわ波紋 */
+.btn-ripple {
+  position: relative;
+  padding: 1rem;
+  border: 0;
+  font-size: 1rem;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  border-radius: 50%;
+  color: #fff;
+  background-color: #0bd;
+}
+.btn-ripple::after,
+.btn-ripple::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  border: 1px solid #0bd;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  animation: ripple-animation 2s linear infinite;
+}
+.btn-ripple::after {
+  animation-delay: .6s; 
+}
+/* 波紋のアニメーション */
+@keyframes ripple-animation {
+  0% {
+    scale: .6;
+  }
+  100% {
+    scale: 1.2;
+    opacity: 0;
+  }
+}
+
+/* クリックで波紋 */
+.btn-click-ripple {
+  position: relative;
+  padding: 1rem 1.5rem;
+  border: 0;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  color: #fff;
+  background-color: #05b;
+  overflow: hidden;
+}
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  scale: 0;
+  animation: ripple .6s linear;
+  background: rgba(255, 255, 255, .6);
+}
+@keyframes ripple {
+  to {
+    scale: 4;
+    opacity: 0;
+  }
+}

@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+button {
+  display: block;
+  margin: 2rem;
+}
+
+/* ポンポン弾む */
+.btn-bounce {
+  padding: 1rem 1.5rem;
+  border: 0;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  color: #fff;
+  background-color: #0bd;
+}
+.btn-bounce:hover {
+  animation: bounce 1s infinite ease-in-out;
+}
+@keyframes bounce {
+  0%, 100% {
+    translate: 0;
+  }
+  50% {
+    translate: 0 -10px;
+  }
+}
+
+/* ポンポン弾んで、色も変えちゃう */
+.btn-click-bounce {
+  padding: 1rem 1.5rem;
+  border: 0;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  color: #fff;
+  background-color: #05b;
+}

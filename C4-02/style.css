@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+.img-grayscale {
+  transition: .4s;
+}
+.img-grayscale:hover {
+  filter: grayscale(1);
+}
+
+/* ダークモードで彩度を落とす */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #000;
+    color: #999;
+  }
+  .img-darkmode {
+    filter: saturate(80%) brightness(60%);
+  }
+}
+
+/* 基本スタイル */
+body {
+  padding: 1rem;
+}
+img {
+  display: block;
+}
+h2 {
+  margin-top: 3rem;
+}

@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+
+/* 画像全体を拡大する */
+.img-zoom {
+  transition: .4s;
+}
+.img-zoom:hover {
+  scale: 1.1;
+}
+
+/* 画像の一部を拡大する */
+.img-container {
+  position: relative;
+  display: inline-block;
+}
+.img-base {
+  width: 500px;
+  height: auto;
+}
+.img-magnifier {
+  position: absolute;
+  border: 2px solid #000;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  pointer-events: none;
+  display: none;
+}
+.img-magnifier img {
+  position: absolute;
+  width: 1000px; /* 拡大用の画像サイズ */
+  height: auto;
+  transform-origin: top left;
+}
+
+/* 基本スタイル */
+body {
+  padding: 2rem;
+}
+img {
+  display: block;
+}
+h2 {
+  margin-top: 3rem;
+}
